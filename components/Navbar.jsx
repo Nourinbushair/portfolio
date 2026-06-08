@@ -14,7 +14,7 @@ export default function Navbar() {
           href="#"
           className="text-cyan-400 font-bold text-2xl"
         >
-          Nourin
+          NB
         </a>
 
         {/* Desktop Menu */}
