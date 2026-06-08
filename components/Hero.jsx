@@ -13,14 +13,15 @@ return ( <section className="relative min-h-screen bg-slate-950 text-white overf
 
 ```
   {/* Background Glow */}
-  <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
-  <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"></div>
+  <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
-  <div className="max-w-7xl mx-auto px-6 py-24 w-full">
+  <div className="absolute bottom-20 right-20 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div className="relative z-20 max-w-7xl mx-auto px-6 py-24 w-full">
 
     <div className="grid md:grid-cols-2 gap-16 items-center">
 
-      {/* IMAGE FIRST ON MOBILE */}
+      {/* IMAGE */}
       <motion.div
         className="flex justify-center order-1 md:order-2"
         initial={{ opacity: 0, x: 60 }}
@@ -29,17 +30,19 @@ return ( <section className="relative min-h-screen bg-slate-950 text-white overf
       >
         <div className="relative">
 
-          <div className="absolute inset-0 bg-cyan-400/30 blur-3xl rounded-full scale-125"></div>
+          <div className="absolute inset-0 bg-cyan-400/30 blur-3xl rounded-full scale-125 pointer-events-none"></div>
 
-          <div className="
-            relative
-            p-3
-            rounded-full
-            bg-white/5
-            backdrop-blur-md
-            border
-            border-white/10
-          ">
+          <div
+            className="
+              relative
+              p-3
+              rounded-full
+              bg-white/5
+              backdrop-blur-md
+              border
+              border-white/10
+            "
+          >
             <img
               src="/profile.jpg"
               alt="Nourin Bushair"
@@ -105,10 +108,13 @@ return ( <section className="relative min-h-screen bg-slate-950 text-white overf
           technologies.
         </p>
 
-        <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-8">
+        {/* Buttons */}
+        <div className="relative z-30 flex flex-wrap justify-center md:justify-start gap-4 mt-8">
 
           <a
             href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               flex items-center gap-2
               bg-cyan-500
@@ -138,12 +144,13 @@ return ( <section className="relative min-h-screen bg-slate-950 text-white overf
 
         </div>
 
-        <div className="flex justify-center md:justify-start gap-6 mt-8 text-3xl">
+        {/* Social Icons */}
+        <div className="relative z-30 flex justify-center md:justify-start gap-6 mt-8 text-3xl">
 
           <a
             href="https://github.com/NourinBushair"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <FaGithub className="hover:text-cyan-400 transition hover:scale-110" />
           </a>
@@ -151,7 +158,7 @@ return ( <section className="relative min-h-screen bg-slate-950 text-white overf
           <a
             href="https://linkedin.com/in/nourin-bushair-kb-59811b358"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <FaLinkedin className="hover:text-cyan-400 transition hover:scale-110" />
           </a>
@@ -163,5 +170,7 @@ return ( <section className="relative min-h-screen bg-slate-950 text-white overf
     </div>
 
   </div>
+
 </section>
-);}
+);
+}
