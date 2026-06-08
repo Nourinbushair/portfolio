@@ -34,7 +34,7 @@ export default function Hero() {
             <h1 className="mt-3 text-5xl md:text-7xl font-bold leading-tight">
               Nourin
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                Bushair K.B.
+                Bushair K.B
               </span>
             </h1>
 
