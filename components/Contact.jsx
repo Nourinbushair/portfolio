@@ -5,7 +5,7 @@ export default function Contact() {
         Contact
       </h2>
       <div className="text-white">
-      <p>Email: your@email.com</p>
+      <p>Email: nourinbushair@gmail.com</p>
       <p>LinkedIn: linkedin.com/in/nourin-bushair-kb-59811b358</p>
       <p>GitHub: github.com/NourinBushair</p>
       </div>
