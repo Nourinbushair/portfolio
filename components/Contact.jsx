@@ -117,6 +117,7 @@ Contact Me
             type="email"
             placeholder="Your Email"
             required
+            className="text-white"
           />
 
           <Input
@@ -126,6 +127,7 @@ Contact Me
             type="text"
             placeholder="Subject"
             required
+            className="text-white"
           />
 
           <Textarea
@@ -134,7 +136,8 @@ Contact Me
             onChange={handleChange}
             placeholder="Tell me about your project, internship opportunity, collaboration, or any questions you have..."
             required
-            className="min-h-[150px]"
+            className="min-h-[150px] text-white"
+            
           />
 
           <button
