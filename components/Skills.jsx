@@ -21,7 +21,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="max-w-6xl mx-auto py-16 px-6"
+      className="max-w-7xl mx-auto py-24 px-6"
     >
       <h2 className="text-5xl font-bold text-cyan-400 mb-10">
         Skills

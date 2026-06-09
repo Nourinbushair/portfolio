@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Experience() {
   return (
-    <section className="max-w-6xl mx-auto py-24 px-6">
+    <section className="max-w-7xl mx-auto py-24 px-6">
 
       <motion.h2
         initial={{ opacity: 0, y: 50 }}
