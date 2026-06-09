@@ -11,7 +11,7 @@ FaDownload,
 export default function Hero() {
 return ( <section className="relative min-h-screen bg-slate-950 text-white overflow-hidden flex items-center">
 
-```
+
   {/* Background Glow */}
   <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
 
