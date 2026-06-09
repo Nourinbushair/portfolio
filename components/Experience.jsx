@@ -35,7 +35,13 @@ export default function Experience() {
           <li>• Threat Analysis & Mitigation</li>
           <li>• Technical Documentation</li>
         </ul>
-
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="mt-10 bg-slate-900 border border-slate-800 rounded-2xl p-8"
+      >
         <h3 className="text-2xl font-semibold text-white">
           Web devlopment Intern
         </h3>
