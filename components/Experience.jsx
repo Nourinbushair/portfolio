@@ -10,7 +10,7 @@ export default function Experience() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-7xl font-bold text-cyan-400 text-centre "
+        className="text-5xl font-bold text-cyan-400 mb-10 text-center"
       >
         Internship Experience
       </motion.h2>
@@ -33,6 +33,21 @@ export default function Experience() {
           <li>• Vulnerability Assessment</li>
           <li>• Security Awareness Training</li>
           <li>• Threat Analysis & Mitigation</li>
+          <li>• Technical Documentation</li>
+        </ul>
+
+        <h3 className="text-2xl font-semibold text-white">
+          Web devlopment Intern
+        </h3>
+
+        <p className="text-cyan-400 mt-2">
+          Cognifyz technologies • 2026
+        </p>
+
+        <ul className="mt-4 space-y-2 text-slate-300">
+          <li>• Web Development Training</li>
+          <li>• Basic HTML and CSS</li>
+          <li>• Weekly Task Analysis</li>
           <li>• Technical Documentation</li>
         </ul>
 
