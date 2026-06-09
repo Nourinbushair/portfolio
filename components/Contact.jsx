@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -34,8 +33,6 @@ setFormData({
 const handleSubmit = async (e) => {
 e.preventDefault();
 
-```
-console.log("Form Submitted");
 
 setLoading(true);
 
@@ -54,7 +51,7 @@ try {
 
   console.log("SUCCESS:", result);
 
-  alert("Message sent successfully!");
+  alert("Message Sent Successfully!");
 
   setFormData({
     name: "",
@@ -67,13 +64,13 @@ try {
 
   alert(
     error?.text ||
-      error?.message ||
-      "Failed to send message."
+    error?.message ||
+    "Failed to send email. Check console."
   );
 }
 
 setLoading(false);
-```
+
 
 };
 
@@ -90,7 +87,6 @@ className="text-5xl font-bold text-cyan-400 mb-10"
 Contact Me
 </motion.h2>
 
-```
   <motion.div
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -104,10 +100,7 @@ Contact Me
       </CardHeader>
 
       <CardContent>
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6"
-        >
+        <form onSubmit={handleSubmit} className="space-y-6">
           <Input
             name="name"
             value={formData.name}
@@ -115,7 +108,6 @@ Contact Me
             type="text"
             placeholder="Your Name"
             required
-            className="bg-slate-950 border-slate-700 text-white placeholder:text-slate-400"
           />
 
           <Input
@@ -125,7 +117,6 @@ Contact Me
             type="email"
             placeholder="Your Email"
             required
-            className="bg-slate-950 border-slate-700 text-white placeholder:text-slate-400"
           />
 
           <Input
@@ -135,7 +126,6 @@ Contact Me
             type="text"
             placeholder="Subject"
             required
-            className="bg-slate-950 border-slate-700 text-white placeholder:text-slate-400"
           />
 
           <Textarea
@@ -144,20 +134,21 @@ Contact Me
             onChange={handleChange}
             placeholder="Tell me about your project, internship opportunity, collaboration, or any questions you have..."
             required
-            className="min-h-[150px] bg-slate-950 border-slate-700 text-white placeholder:text-slate-400"
+            className="min-h-[150px]"
           />
 
-          <Button
+          <button
             type="submit"
             disabled={loading}
-            className="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-semibold"
+            className="w-full bg-cyan-500 hover:bg-cyan-600 disabled:opacity-50 text-black font-semibold py-3 rounded-md transition"
           >
             {loading ? "Sending..." : "Send Message"}
-          </Button>
+          </button>
         </form>
       </CardContent>
     </Card>
   </motion.div>
 </section>
+
 );
 }
