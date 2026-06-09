@@ -20,7 +20,7 @@ export default function Stats() {
 
         <div className="text-white">
           <h2 className="text-5xl text-cyan-400 font-bold">
-            1
+            2
           </h2>
           <p>Internship</p>
         </div>
