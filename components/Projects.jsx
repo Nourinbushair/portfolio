@@ -57,6 +57,30 @@ description:
 tech: ["Python", "Sockets", "Networking"],
 github: "https://github.com/NourinBushair/python-port-scanner",
 },
+
+{
+title: "caesar cipher tool",
+description:
+"A beginner-friendly Python Caesar Cipher tool for encrypting and decrypting messages using classical cryptography techniques.",
+tech: ["Python", "Sockets", "Networking"],
+github: "https://github.com/NourinBushair/caesar-cipher-tool",
+},
+
+{
+title: "keylogger detection",
+description:
+"A beginner-friendly Python tool that detects suspicious keylogger-like processes for cybersecurity learning and defensive security practice.",
+tech: ["Python", "Sockets", "Networking"],
+github: "https://github.com/NourinBushair/keylogger-detection",
+},
+
+{
+title: "my electron app",
+description:
+"A simple Electron-based desktop application built using HTML, CSS, JavaScript, and Node.js for learning desktop app development.",
+tech: ["Python", "Sockets", "Networking"],
+github: "https://github.com/NourinBushair/my-electron-app",
+},
 ];
 
 export default function Projects() {
