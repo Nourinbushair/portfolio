@@ -94,13 +94,13 @@ Contact Me
   >
     <Card className="bg-slate-900 border-slate-800 shadow-lg shadow-cyan-500/10">
       <CardHeader>
-        <CardTitle className="text-white text-2xl text-center">
+        <CardTitle className="text-cyan-400 text-2xl text-center ">
           Let's Work Together
         </CardTitle>
       </CardHeader>
 
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6 text-white">
           <Input
             name="name"
             value={formData.name}
