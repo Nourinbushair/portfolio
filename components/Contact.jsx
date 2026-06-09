@@ -34,7 +34,7 @@ Contact Me
     </CardHeader>
 
     <CardContent>
-      <form className="space-y-6">
+      <form className="space-y-6 text-white">
 
         <Input
           type="text"
@@ -42,18 +42,18 @@ Contact Me
         />
 
         <Input
-          type="email"
+          type="email text-white"
           placeholder="Your Email"
         />
 
         <Textarea
           placeholder="Your Message"
-          className="min-h-[150px]"
+          className="min-h-[150px] text-white"
         />
 
         <Button
           type="submit"
-          className="w-full"
+          className="w-full text-white"
         >
           Send Message
         </Button>
