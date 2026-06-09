@@ -10,7 +10,7 @@ export default function Experience() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl font-bold text-cyan-400"
+        className="text-7xl font-bold text-cyan-400 text-centre "
       >
         Internship Experience
       </motion.h2>
