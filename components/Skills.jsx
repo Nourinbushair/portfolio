@@ -23,7 +23,7 @@ export default function Skills() {
       id="skills"
       className="max-w-7xl mx-auto py-24 px-6"
     >
-      <h2 className="text-5xl font-bold text-cyan-400 mb-10">
+      <h2 className="text-5xl font-bold text-cyan-400 mb-10 text-center">
         Skills
       </h2>
 

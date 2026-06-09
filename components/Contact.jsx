@@ -21,7 +21,7 @@ return ( <section
 initial={{ opacity: 0, y: 40 }}
 whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.5 }}
-className="text-5xl font-bold text-cyan-400 mb-10 "
+className="text-5xl font-bold text-cyan-400 mb-10 text-center "
 >
 Contact Me
 </motion.h2>

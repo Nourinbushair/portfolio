@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="max-w-7xl mx-auto py-24 px-6"
+      className="max-w-7xl mx-auto py-24 px-6 text-center"
     >
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
