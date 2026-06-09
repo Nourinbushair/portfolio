@@ -166,24 +166,27 @@ export default function Contact() {
         </Card>
       </motion.div>
 
-      {/* Programmatic AlertDialog Configuration */}
-      <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
-        <AlertDialogContent className="bg-slate-900 border-slate-800 text-white">
-          <AlertDialogHeader>
-            <AlertDialogTitle className="text-cyan-400 text-xl">
-              {alertContent.title}
-            </AlertDialogTitle>
-            <AlertDialogDescription className="text-slate-400">
-              {alertContent.description}
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogAction className="bg-cyan-500 hover:bg-cyan-600 text-black font-semibold">
-              Okay
-            </AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+     
+<AlertDialog open={isOpen} onOpenChange={setIsOpen}>
+  <AlertDialogContent className="bg-slate-950 border border-cyan-500/30 text-white shadow-xl shadow-cyan-500/5 max-w-[400px] rounded-lg">
+    <AlertDialogHeader>
+      <AlertDialogTitle className="text-cyan-400 text-2xl font-bold tracking-wide">
+        {alertContent.title}
+      </AlertDialogTitle>
+      <AlertDialogDescription className="text-slate-400 text-sm mt-2 leading-relaxed">
+        {alertContent.description}
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter className="mt-6">
+      <AlertDialogAction 
+        className="w-full bg-cyan-500 hover:bg-cyan-600 active:scale-[0.98] text-black font-bold uppercase tracking-wider py-2.5 rounded transition-all duration-200"
+      >
+        okay
+      </AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+
     </section>
   );
 }
