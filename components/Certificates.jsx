@@ -84,7 +84,7 @@ return ( <section
 <motion.h2
 initial={{ opacity: 0, y: 40 }}
 whileInView={{ opacity: 1, y: 0 }}
-className="text-5xl font-bold text-cyan-400 text-center mb-12"
+className="text-5xl font-bold text-cyan-400 mb-12"
 >
 Certifications
 </motion.h2>
