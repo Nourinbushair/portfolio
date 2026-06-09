@@ -7,7 +7,6 @@ import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
 import {
 Card,
 CardContent,
@@ -23,6 +22,8 @@ subject: "",
 message: "",
 });
 
+const [loading, setLoading] = useState(false);
+
 const handleChange = (e) => {
 setFormData({
 ...formData,
@@ -34,6 +35,10 @@ const handleSubmit = async (e) => {
 e.preventDefault();
 
 ```
+console.log("Form Submitted");
+
+setLoading(true);
+
 try {
   const result = await emailjs.send(
     "service_hkw426o",
@@ -47,7 +52,7 @@ try {
     "w9NqiKoYQxqCWk9Bx"
   );
 
-  console.log("SUCCESS!", result);
+  console.log("SUCCESS:", result);
 
   alert("Message sent successfully!");
 
@@ -62,10 +67,12 @@ try {
 
   alert(
     error?.text ||
-    error?.message ||
-    "Failed to send message. Check console."
+      error?.message ||
+      "Failed to send message."
   );
 }
+
+setLoading(false);
 ```
 
 };
@@ -97,7 +104,10 @@ Contact Me
       </CardHeader>
 
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-6"
+        >
           <Input
             name="name"
             value={formData.name}
@@ -139,15 +149,15 @@ Contact Me
 
           <Button
             type="submit"
+            disabled={loading}
             className="w-full bg-cyan-500 hover:bg-cyan-600 text-black font-semibold"
           >
-            Send Message
+            {loading ? "Sending..." : "Send Message"}
           </Button>
         </form>
       </CardContent>
     </Card>
   </motion.div>
 </section>
-
 );
 }
