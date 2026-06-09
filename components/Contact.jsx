@@ -15,7 +15,7 @@ CardTitle,
 export default function Contact() {
 return ( <section
    id="contact"
-   className="max-w-6xl mx-auto py-24 px-6"
+   className="max-w-7xl mx-auto py-24 px-6"
  >
 <motion.h2
 initial={{ opacity: 0, y: 40 }}
