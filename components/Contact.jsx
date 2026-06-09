@@ -35,7 +35,7 @@ e.preventDefault();
 
 ```
 try {
-  await emailjs.send(
+  const result = await emailjs.send(
     "service_hkw426o",
     "template_cug4kxt",
     {
@@ -47,6 +47,8 @@ try {
     "w9NqiKoYQxqCWk9Bx"
   );
 
+  console.log("SUCCESS!", result);
+
   alert("Message sent successfully!");
 
   setFormData({
@@ -56,8 +58,13 @@ try {
     message: "",
   });
 } catch (error) {
-  console.error(error);
-  alert("Failed to send message.");
+  console.error("EMAILJS ERROR:", error);
+
+  alert(
+    error?.text ||
+    error?.message ||
+    "Failed to send message. Check console."
+  );
 }
 ```
 
@@ -90,16 +97,14 @@ Contact Me
       </CardHeader>
 
       <CardContent>
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6"
-        >
+        <form onSubmit={handleSubmit} className="space-y-6">
           <Input
             name="name"
             value={formData.name}
             onChange={handleChange}
             type="text"
             placeholder="Your Name"
+            required
             className="bg-slate-950 border-slate-700 text-white placeholder:text-slate-400"
           />
 
@@ -109,6 +114,7 @@ Contact Me
             onChange={handleChange}
             type="email"
             placeholder="Your Email"
+            required
             className="bg-slate-950 border-slate-700 text-white placeholder:text-slate-400"
           />
 
@@ -118,6 +124,7 @@ Contact Me
             onChange={handleChange}
             type="text"
             placeholder="Subject"
+            required
             className="bg-slate-950 border-slate-700 text-white placeholder:text-slate-400"
           />
 
@@ -126,6 +133,7 @@ Contact Me
             value={formData.message}
             onChange={handleChange}
             placeholder="Tell me about your project, internship opportunity, collaboration, or any questions you have..."
+            required
             className="min-h-[150px] bg-slate-950 border-slate-700 text-white placeholder:text-slate-400"
           />
 
